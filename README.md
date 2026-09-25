@@ -33,6 +33,7 @@ Open [http://localhost:3000](http://localhost:3000). Until a database is configu
    ```powershell
    npm run db:auth
    npm run db:students
+   npm run db:school
    ```
 
 5. Create the first administrator. The command prompts for the account details and password; it does not use a built-in default:
@@ -48,6 +49,7 @@ Open [http://localhost:3000](http://localhost:3000). Until a database is configu
 - **Admin** can read student records, see guardian contact details, add students, and manage staff accounts through the protected Better Auth admin API.
 - **Teacher** can read the school student list and academic details. Guardian contact details and birth dates are withheld, and student records cannot be added or changed.
 - Public account sign-up is disabled. Only an administrator should provision staff accounts.
+- Admins can create and update teacher and staff directory entries, schedule events, exams, and school notices from the corresponding workspace pages. The dashboard reads live PostgreSQL counts and latest records and refreshes every 15 seconds.
 
 To create a Teacher account from the trusted project machine, run `npm run db:create-teacher`. The Better Auth CLI prompts for the account details and password.
 

@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "db:auth": "node scripts/auth-cli.mjs migrate --yes",
     "db:students": "node scripts/migrate-students.mjs",
+    "db:school": "node scripts/migrate-school.mjs",
     "db:create-admin": "node scripts/auth-cli.mjs create-admin --role admin",
     "db:create-teacher": "node scripts/auth-cli.mjs create-admin --role teacher"
   },
