@@ -8,3 +8,33 @@
 @media(min-width:701px) and (max-width:850px){.content-grid{grid-template-columns:1fr}.center-column{padding:18px 14px}.activities-panel,.attendance-panel{height:165px}}
 .dashboard{width:min(984px,calc(100% - 154px));margin-left:75px}
 @media(max-width:1050px){.dashboard{width:100%;margin-left:0}}
+
+/* Use the available screen width and let dashboard content scroll instead of clipping. */
+.app-frame{width:min(1600px,calc(100% - 48px));margin:0 auto;padding:28px 0 24px;min-height:100svh;overflow:visible}
+.masthead{height:56px;padding:0 22px}
+.dashboard{width:100%;margin:0;grid-template-columns:180px minmax(0,1fr) 286px;min-height:calc(100svh - 84px);border-radius:12px;overflow:visible}
+.sidebar{padding:22px 16px 18px;border-radius:12px 0 0 12px}
+.center-column{padding:18px 20px 22px;margin:8px 0 0}
+.right-column{padding:24px 18px 20px;border-radius:0 12px 12px 0}
+.profile-row{margin-bottom:24px}
+.calendar-panel{margin-bottom:22px}
+.upcoming-section{margin-bottom:24px}
+
+@media(min-width:1450px){.app-frame{width:min(1720px,calc(100% - 64px))}.dashboard{grid-template-columns:200px minmax(0,1fr) 320px}}
+@media(min-width:1051px) and (max-width:1240px){.dashboard{grid-template-columns:164px minmax(0,1fr) 260px}.center-column{padding-left:16px;padding-right:16px}.right-column{padding-left:15px;padding-right:15px}.search-box{width:230px}}
+@media(min-width:1051px) and (max-height:760px){.app-frame{padding-top:16px;padding-bottom:18px}.masthead{height:46px}.dashboard{min-height:calc(100svh - 62px)}.center-column{padding:14px 16px 16px}.center-topbar{height:32px;margin-bottom:8px}.stats-grid{gap:10px;margin-bottom:9px}.stat-card{min-height:54px;padding:8px 10px}.content-grid{gap:10px}.panel{padding:9px}.donut-wrap{height:103px}.donut{width:88px;height:88px}.donut:before{inset:20px}.chart-legend{margin:7px 0 6px}.chart-layout{height:116px}.attendance-panel,.activities-panel{height:145px}.attendance-chart{height:88px;margin-top:6px}.notice-panel,.messages-panel{height:128px}.notice-row{padding:6px 0}.message-row{padding:6px 0}.right-column{padding-top:17px;padding-bottom:16px}.profile-row{margin-bottom:16px}.calendar-heading{margin-bottom:11px}.weekdays{padding-bottom:7px}.calendar-days{row-gap:2px;margin-top:5px}.calendar-days span{height:18px;width:18px}.calendar-panel{margin-bottom:16px}.upcoming-section{margin-bottom:18px}.event-list{gap:6px}.event-card{padding:8px}}
+@media(max-width:1050px){.app-frame{width:calc(100% - 28px);padding:20px 0 18px}.masthead{height:52px;padding:0 18px}.dashboard{grid-template-columns:140px minmax(0,1fr);min-height:calc(100svh - 72px);border-radius:12px;overflow:visible}.sidebar{border-radius:12px 0 0 0}.right-column{border-radius:0 0 12px 12px}}
+@media(max-width:700px){.app-frame{width:calc(100% - 16px);padding:12px 0 14px}.masthead{height:48px;padding:0 8px}.dashboard{grid-template-columns:minmax(0,1fr);min-height:auto;border-radius:11px;overflow:visible}.sidebar{border-radius:11px 11px 0 0}.right-column{border-radius:0 0 11px 11px}}
+
+/* Full-screen application shell: no framed blue canvas or floating dashboard card. */
+html,body{min-height:100%;background:#f4f7fb}
+body{background:#f4f7fb;overflow-x:hidden}
+.app-frame{width:100%;max-width:none;margin:0;padding:0;min-height:100svh;background:#f4f7fb;overflow:visible}
+.app-frame:before{display:none}
+.masthead{display:none}
+.dashboard{width:100%;margin:0;grid-template-columns:200px minmax(0,1fr) 300px;min-height:100svh;border-radius:0;box-shadow:none;overflow:visible}
+.sidebar,.center-column,.right-column{border-radius:0}
+.sidebar{min-height:100svh}
+.center-column{margin:0}
+@media(max-width:1050px){.dashboard{grid-template-columns:140px minmax(0,1fr);min-height:100svh}.sidebar{min-height:100svh}}
+@media(max-width:700px){.dashboard{grid-template-columns:minmax(0,1fr);min-height:100svh}.sidebar{min-height:0}}
