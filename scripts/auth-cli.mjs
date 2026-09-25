@@ -1,6 +1,7 @@
-import { loadEnvConfig } from "@next/env";
+import nextEnv from "@next/env";
 import { spawn } from "node:child_process";
 
+const { loadEnvConfig } = nextEnv;
 loadEnvConfig(process.cwd());
 
 if (!process.env.DATABASE_URL || !process.env.BETTER_AUTH_SECRET || process.env.BETTER_AUTH_SECRET.length < 32) {
